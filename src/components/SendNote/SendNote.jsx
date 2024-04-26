@@ -16,7 +16,7 @@ export default function SendNote() {
     try {
       const response = await fetch(
         "https://vop4f76uc3.execute-api.us-east-1.amazonaws.com",
-        {
+        {          
           method: "PATCH",
           body: JSON.stringify({ order_note: note }),
           headers: {
@@ -25,7 +25,7 @@ export default function SendNote() {
         }
       );
 
-      console.log(sendNoteToApi)
+    
       const data = await response.json();
       console.log(data)
 
